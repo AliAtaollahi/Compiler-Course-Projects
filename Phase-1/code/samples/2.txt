@@ -1,0 +1,17 @@
+"C:\Program Files\Java\jdk-19\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.1\lib\idea_rt.jar=59853:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath D:\7\Compiler\CAs\Phase1\code\UTL\UTL\out\production\UTL;D:\7\Compiler\CAs\Phase1\Description\antlr-4.13.1-complete.jar org.antlr.v4.gui.TestRig main.grammer.UTL program -gui samples/sample2.utl
+VarDec:o3
+Operator:=
+VarDec:x
+Operator:=
+Conditional:if
+Operator:*
+Operator:+
+ErrorControl:4
+Operator:>
+VarDec:a
+ErrorControl:2
+Operator:=
+ErrorControl:1
+FunctionCall
+VarDec:t1
+Operator:=
