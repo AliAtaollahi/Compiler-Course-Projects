@@ -1,0 +1,37 @@
+void OnInit(Trade t1) {
+    Order o3 = Order(SELL, 100, 100, 10);
+}
+
+void OnInit(Trade t1) {
+    string x = 2;
+}
+
+void OnInit(Trade t1) {
+    string x = 2;
+    string x = 2;
+}
+
+void OnInit(Trade t2) {
+    string x = 2;
+}
+
+void OnStart(Trade t1) throw Exception {
+    float t1 = 4.0;
+    if (t1 + 2 * 3 > Exception(4, "ss").Type) {
+        Exception a = Exception(2, "ee");
+        throw Exception(1, "ss");
+        throw a;
+    }
+}
+
+void Main() {
+    Connect("username", "password");
+    Trade t1 = Observe("");
+    Trade t1 = Observe("");
+}
+
+void Main() {
+    Connect("username", "password");
+    Trade t1 = Observe("");
+    Trade t1 = Observe("");
+}

@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="sample1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="main.UTL" />
+    <module name="UTL" />
+    <option name="PROGRAM_PARAMETERS" value="sample/sample1.utl" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

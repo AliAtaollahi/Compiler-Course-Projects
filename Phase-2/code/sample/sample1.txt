@@ -1,0 +1,134 @@
+Line:0:Program
+Line:1:VarDeclaration balance
+Line:2:VarDeclaration tick_counts
+Line:2:IntValue
+Line:4:OnInitDeclaration
+Line:4:Identifier t3
+Line:7:VarDeclaration o3
+Line:7:FunctionCall
+Line:7:Identifier Order
+Line:7:TradeValue SELL
+Line:7:IntValue
+Line:7:IntValue
+Line:7:IntValue
+Line:9:OnStartDeclaration
+Line:9:Identifier t1
+Line:13:IfElseStmt
+Line:13:BinaryExpression GT
+Line:13:Identifier tick_counts
+Line:13:IntValue
+Line:15:FunctionCall
+Line:15:Identifier RefreshRate
+Line:16:AssignStmt
+Line:16:Identifier tick_counts
+Line:16:IntValue
+Line:19:VarDeclaration low
+Line:19:VarAccess
+Line:19:Identifier t1
+Line:19:Identifier Bid
+Line:20:VarDeclaration high
+Line:20:VarAccess
+Line:20:Identifier t1
+Line:20:Identifier Ask
+Line:21:VarDeclaration predict
+Line:22:VarDeclaration samples
+Line:22:FunctionCall
+Line:22:Identifier GetCandle
+Line:22:IntValue
+Line:23:VarDeclaration maxSamples
+Line:24:ForStmt
+Line:24:VarDeclaration i
+Line:24:IntValue
+Line:24:BinaryExpression EQ
+Line:24:Identifier i
+Line:24:IntValue
+Line:24:UnaryExpression INC
+Line:24:Identifier i
+Line:26:AssignStmt
+Line:26:ArrayIdentifier maxSamples
+Line:26:BinaryExpression MINUS
+Line:26:IntValue
+Line:26:Identifier i
+Line:26:VarAccess
+Line:26:ArrayIdentifier samples
+Line:26:Identifier i
+Line:26:Identifier High
+Line:29:VarDeclaration Stoploss
+Line:29:IntValue
+Line:30:VarDeclaration TakeProfit
+Line:30:IntValue
+Line:31:VarDeclaration amount
+Line:31:IntValue
+Line:32:VarDeclaration o1
+Line:32:FunctionCall
+Line:32:Identifier Order
+Line:32:TradeValue BUY
+Line:32:Identifier Stoploss
+Line:32:Identifier TakeProfit
+Line:32:Identifier amount
+Line:33:IfElseStmt
+Line:33:BinaryExpression GT
+Line:33:BinaryExpression PLUS
+Line:33:BinaryExpression MULT
+Line:33:ArrayIdentifier predict
+Line:33:IntValue
+Line:33:IntValue
+Line:33:ArrayIdentifier predict
+Line:33:IntValue
+Line:33:IntValue
+Line:34:MethodCall
+Line:34:Identifier o1
+Line:34:Identifier Open
+Line:36:VarDeclaration profit_ratio
+Line:36:BinaryExpression DIV
+Line:36:Identifier TakeProfit
+Line:36:Identifier amount
+Line:37:WhileStmt
+Line:37:BinaryExpression GT
+Line:37:Identifier profit_ratio
+Line:37:IntValue
+Line:39:IfElseStmt
+Line:39:BinaryExpression LT
+Line:39:Identifier profit_ratio
+Line:39:IntValue
+Line:41:MethodCall
+Line:41:Identifier o1
+Line:41:Identifier Close
+Line:42:ContinueBreakStmt break
+Line:46:ContinueBreakStmt continue
+Line:50:OnStartDeclaration
+Line:50:Identifier t2
+Line:52:UnaryExpression INC
+Line:52:Identifier tick_counts
+Line:54:OnStartDeclaration
+Line:54:Identifier t3
+Line:56:FunctionCall
+Line:56:Identifier GetCandle
+Line:56:IntValue
+Line:59:MainDeclaration
+Line:61:TryCatchStmt
+Line:63:FunctionCall
+Line:63:Identifier Connect
+Line:63:StringValue
+Line:63:StringValue
+Line:64:VarDeclaration t1
+Line:64:FunctionCall
+Line:64:Identifier Observe
+Line:64:StringValue
+Line:65:VarDeclaration t2
+Line:65:FunctionCall
+Line:65:Identifier Observe
+Line:65:StringValue
+Line:66:VarDeclaration t3
+Line:66:FunctionCall
+Line:66:Identifier Observe
+Line:66:StringValue
+Line:70:IfElseStmt
+Line:70:BinaryExpression EQ
+Line:70:VarAccess
+Line:70:Identifier e
+Line:70:Identifier Type
+Line:70:IntValue
+Line:71:FunctionCall
+Line:71:Identifier Print
+Line:71:StringValue

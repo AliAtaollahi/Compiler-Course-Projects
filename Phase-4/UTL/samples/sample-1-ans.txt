@@ -1,0 +1,108 @@
+.class public UTL
+.super java/lang/Object
+
+.field public static balance I
+.field public tick_counts I
+
+.method public <init>()V
+    aload_0
+    invokespecial java/lang/Object/<init>()V
+    return
+.end method
+
+.method public OnInit(LTrade;)V
+    .limit stack 128
+    .limit locals 128
+    new Order
+    dup
+    ldc "SELL"
+    bipush 100
+    bipush 100
+    bipush 10
+    invokespecial Order/<init>(Ljava/lang/String;III)V
+    astore_2
+    return 
+.end method
+
+.method public OnInit(LTrade;)V
+    .limit stack 128
+    .limit locals 128
+
+    new Order
+    dup
+    ldc "BUY"
+    bipush 200
+    bipush 50
+    bipush 5
+    invokespecial Order/<init>(Ljava/lang/String;III)V
+    astore_2 
+
+    new Order
+    dup 
+    ldc "SELL"
+    bipush 100
+    bipush 100
+    bipush 10
+    invokespecial Order/<init>(Ljava/lang/String;III)V
+    astore_3 
+    return
+.end method
+
+.method public Onstart(LTrade;)V
+    .limit stack 128
+    .limit locals 128
+
+    aload_1
+    invokevirtual LTrade/getBid()F
+    fstore_2 
+
+    aload_1
+    invokevirtual LTrade/getAsk()D
+    dstore_3 
+
+    invokestatic LYourClass/linearRegressionAlgorithm()F
+    fstore 5 
+
+    new LOrder
+    dup
+    ldc "BUY"
+    fload 5 
+    f2i
+    fload 5 
+    f2i
+    bipush 20
+    invokespecial LOrder/<init>(Ljava/lang/String;III)V
+    astore 6 
+
+    return
+.end method
+
+.method public OnStart(LTrade;)V
+    .limit stack 128
+    .limit locals 128
+
+    ldc 100 
+    invokevirtual LYourClass/GetCandle(I)V
+
+    return
+.end method
+
+.method public static Main([Ljava/lang/String;)V
+    .limit stack 128
+    .limit locals 128
+
+    
+    ldc "admin" 
+    ldc "password" 
+    invokestatic LYourClass/Connect(Ljava/lang/String;Ljava/lang/String;)V
+
+    ldc "USDETH" 
+    invokestatic LYourClass/Observe(Ljava/lang/String;)LTrade;
+    astore_1 
+
+    ldc "IRRETH" 
+    invokestatic LYourClass/Observe(Ljava/lang/String;)LTrade;
+    astore_2
+
+    return
+.end method

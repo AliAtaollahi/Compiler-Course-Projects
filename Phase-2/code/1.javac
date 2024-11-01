@@ -1,0 +1,20 @@
+iconst_0
+istore_1
+[[while ...]] exit exit
+    start1: branch(i<100, ... ,body1,exit)
+    body1: iconst_0  // int j=0
+           istore_2
+    start2: branch(j<count, body2, fresh)
+    body2: branch(j>i, update2, update1) // if
+    update1: iconst_1 // j++
+             iload_2
+             iadd
+             istore_2
+             goto start2
+    update2: goto fresh //break
+    fresh: iconst_1 // i++
+           iload_1
+           iadd
+           istore_1
+           goto start1
+    exit: return

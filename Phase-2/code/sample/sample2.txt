@@ -1,0 +1,3 @@
+Line:5:Redefinition of primitive function:t1
+Line:10:Redefinition of variable t1
+Line:21:Redefinition of variable t1

@@ -1,0 +1,3 @@
+Line:3:Name of variable isOdd conflicts with the function's name
+Line:9:Redefinition of variable input
+Line:18:Redefinition of method boolToString
